@@ -38,6 +38,10 @@ class HeatExchanger:
         else:
             return (temperature_difference_a - temperature_difference_b) / math.log(temperature_difference_a / temperature_difference_b)
 
+    @property
+    def area(self):
+        return self.heat_load / (self.overall_heat_treansfer_coefficient * self.logarithmic_temperature_difference)
+
     def stream_temperature_difference(self, heat_capacity_flow):
         return self.heat_load / heat_capacity_flow
 

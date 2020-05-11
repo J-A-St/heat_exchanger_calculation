@@ -51,6 +51,12 @@ class TestHeatExchanger:
         assert self.heat_exchanger.logarithmic_temperature_difference == self.heat_exchanger.inlet_temperature_hot_stream - \
             self.heat_exchanger.outlet_temperature_cold_stream
 
+    def test_area(self):
+        self.setup_model()
+        area = self.heat_load / (self.heat_exchanger.overall_heat_treansfer_coefficient *
+                                 self.heat_exchanger.logarithmic_temperature_difference)
+        assert area == self.heat_exchanger.area
+
 
 if __name__ == "__main__":
     TestHeatExchanger()
