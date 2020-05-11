@@ -1,3 +1,5 @@
+import math
+
 
 class HeatExchanger:
     """Class for heat exchanger calculation. First index of list is hot stream, and second index is cold stream. The following units are used:
@@ -26,6 +28,15 @@ class HeatExchanger:
     @property
     def outlet_temperature_cold_stream(self):
         return self.inlet_temperature_cold_stream + self.stream_temperature_difference(self.heat_capacity_flow_cold_stream)
+
+    @property
+    def logarithmic_temperature_difference(self):
+        temperature_difference_a = self.outlet_temperature_hot_stream - self.inlet_temperature_cold_stream
+        temperature_difference_b = self.inlet_temperature_hot_stream - self.outlet_temperature_cold_stream
+        if temperature_difference_a == temperature_difference_b:
+            return temperature_difference_a
+        else:
+            return (temperature_difference_a - temperature_difference_b) / math.log(temperature_difference_a / temperature_difference_b)
 
     def stream_temperature_difference(self, heat_capacity_flow):
         return self.heat_load / heat_capacity_flow
