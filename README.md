@@ -19,11 +19,13 @@ Copyright 2020 Jan Stampfli
 ## Description
 
 Framework to calculate the outlet temperatures, the logarithmic temperature difference, the overall heat transfer coefficient and the needed area for a counter-current heat exchanger.
+
 Input:
 * Inlet temperatures (°C)
 * Film heat transfer coefficients (kW/(m2K))
 * Heat capacity flows = specific heat capacity * mass flow (kW/s)
 * Heat load (kW)
+
 Results:
 * Outlet temperatures (°C)
 * Overall heat transfer coefficient (kW/(m2K))
