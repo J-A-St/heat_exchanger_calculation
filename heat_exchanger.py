@@ -3,7 +3,7 @@ import math
 
 class HeatExchanger:
     """Class for heat exchanger calculation. First index of list is hot stream, and second index is cold stream. The following units are used:
-        [temperatures] = K
+        [temperatures] = °C
         [film_heat_transfer_coefficients] = kW/(m2K)
         [heat_capacity_flows = specific_heat_transfer_coefficient * mass_flow] = kW/s 
         [heat_load] = kW"""
