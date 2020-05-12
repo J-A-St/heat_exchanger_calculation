@@ -20,7 +20,7 @@ class TestHeatExchanger:
         overall_heat_transfer_coefficient = 1 / \
             (1 / self.film_heat_transfer_coefficients[0] +
              1 / self.film_heat_transfer_coefficients[1])
-        assert overall_heat_transfer_coefficient == self.heat_exchanger.overall_heat_treansfer_coefficient
+        assert overall_heat_transfer_coefficient == self.heat_exchanger.overall_heat_transfer_coefficient
 
     def test_outlet_temperatures(self):
         self.setup_model()
@@ -53,7 +53,7 @@ class TestHeatExchanger:
 
     def test_area(self):
         self.setup_model()
-        area = self.heat_load / (self.heat_exchanger.overall_heat_treansfer_coefficient *
+        area = self.heat_load / (self.heat_exchanger.overall_heat_transfer_coefficient *
                                  self.heat_exchanger.logarithmic_temperature_difference)
         assert area == self.heat_exchanger.area
 

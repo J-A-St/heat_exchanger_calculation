@@ -23,10 +23,14 @@ Framework to calculate the outlet temperatures, the logarithmic temperature diff
 Input:
 * Inlet temperatures (°C)
 * Film heat transfer coefficients (kW/(m2K))
-* Heat capacity flows = specific heat capacity * mass flow (kW/s)
+* Heat capacity flows = specific heat capacity * mass flow (kW/K)
 * Heat load (kW)
 
-Results:
+Properties of heat exchanger:
+* Inlet temperatures (°C)
+* Film heat transfer coefficients (kW/(m2K))
+* Heat capacity flows = specific heat capacity * mass flow (kW/K)
+* Heat load (kW)
 * Outlet temperatures (°C)
 * Overall heat transfer coefficient (kW/(m2K))
 * Logarithmic temperature difference (K)
