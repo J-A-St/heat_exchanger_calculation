@@ -3,14 +3,14 @@ import math
 from heat_exchanger import HeatExchanger
 
 
-def setup_model(self):
+def setup_model():
     """Setup coefficients for testing the heat exchanger class"""
-    self.inlet_temperatures = [80, 20]
-    self.film_heat_transfer_coefficients = [1.5, 3]
-    self.heat_capacity_flows = [15, 20]
-    self.heat_load = 25
-    self.heat_exchanger = HeatExchanger(
-        self.inlet_temperatures, self.film_heat_transfer_coefficients, self.heat_capacity_flows, self.heat_load)
+    m = HeatExchanger()
+    m.inlet_temperatures = [80, 20]
+    m.film_heat_transfer_coefficients = [1.5, 3]
+    m.heat_capacity_flows = [15, 20]
+    m.heat_load = 25
+    return m
 
 
 def test_overall_heat_transfer_coefficient():
