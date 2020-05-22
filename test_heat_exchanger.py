@@ -55,10 +55,11 @@ def test_logarithmic_temperature_difference():
 def test_area():
     m = setup_model()
     area = m.heat_load / (m.heat_exchanger.overall_heat_transfer_coefficient *
-                             m.heat_exchanger.logarithmic_temperature_difference)
+                          m.heat_exchanger.logarithmic_temperature_difference)
     assert area == m.heat_exchanger.area
 
 
-
 def test_fail()
-	assert False
+
+
+assert False
