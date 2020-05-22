@@ -5,12 +5,11 @@ from heat_exchanger import HeatExchanger
 
 def setup_model():
     """Setup coefficients for testing the heat exchanger class"""
-    m = HeatExchanger()
-    m.inlet_temperatures = [80, 20]
-    m.film_heat_transfer_coefficients = [1.5, 3]
-    m.heat_capacity_flows = [15, 20]
-    m.heat_load = 25
-    return m
+    return HeatExchanger(
+        inlet_temperatures=[80, 20],
+        film_heat_transfer_coefficients=[1.5, 3],
+        heat_capacity_flows=[15, 20],
+        heat_load=25)
 
 
 def test_overall_heat_transfer_coefficient():
