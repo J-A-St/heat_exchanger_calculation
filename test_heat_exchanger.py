@@ -6,6 +6,7 @@ inlet_temperatures = [80, 20]
 film_heat_transfer_coefficients = [1.5, 3]
 heat_capacity_flows = [15, 20]
 
+
 def setup_model():
     """Setup coefficients for testing the heat exchanger class"""
     return HeatExchanger(
