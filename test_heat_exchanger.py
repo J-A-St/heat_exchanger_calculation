@@ -36,10 +36,10 @@ def test_outlet_temperatures():
 
 def test_logarithmic_temperature_difference():
     m = setup_model()
-    temperature_difference_a = m.inlet_temperatures[0] - \
+    temperature_difference_a = inlet_temperatures[0] - \
         m.outlet_temperature_cold_stream
     temperature_difference_b = m.outlet_temperature_hot_stream - \
-        m.inlet_temperatures[1]
+        inlet_temperatures[1]
     if temperature_difference_a == temperature_difference_b:
         logarithmic_temperature_difference = temperature_difference_a
     else:
