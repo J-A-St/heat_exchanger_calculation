@@ -25,8 +25,10 @@ Input:
 * Film heat transfer coefficients (kW/(m2K))
 * Heat capacity flows = specific heat capacity * mass flow (kW/K)
 * Heat load (kW)
-* Mixer types: none, bypass, or admixer
-* Mixer fractions ((kg/s)/(kg/s))
+* Mixer type hot side -- none, bypass, or admixer
+* Mixer type cold side -- none, bypass, or admixer
+* Mixer fraction hot side -- 0...1 ((kg/s)/(kg/s))
+* Mixer fraction cold side -- 0...1 ((kg/s)/(kg/s))
 
 Properties of heat exchanger:
 * Inlet temperatures (°C)
