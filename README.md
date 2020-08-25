@@ -16,9 +16,9 @@ Copyright 2020 Jan Stampfli
    See the License for the specific language governing permissions and
    limitations under the License.
 
-## Description
+## Description HeatExchanger
 
-HeatExchanger class: Framework to calculate the outlet temperatures, the logarithmic temperature difference, the overall heat transfer coefficient and the needed area for a counter-current heat exchanger.
+Framework to calculate the outlet temperatures, the logarithmic temperature difference, the overall heat transfer coefficient and the needed area for a counter-current heat exchanger.
 
 Input:
 * Inlet temperatures (°C)
@@ -40,7 +40,9 @@ Properties of heat exchanger:
 * Logarithmic temperature difference (K)
 * Area (m2)
 
-HeatExchangerReversed class: Framework to calculate the inlet, outlet temperatures, needed mixer fraction to compensate too large or small area (different operating case) for a counter-current heat exchanger. The logarithmic mean temperature difference is reversed using the Lambert W-function, first mentioned by Euler (1779), as explained by Chen (2019).
+## Description HeatExchangerReversed
+
+Framework to calculate the inlet, outlet temperatures, needed mixer fraction to compensate too large or small area (different operating case) for a counter-current heat exchanger. The logarithmic mean temperature difference is reversed using the Lambert W-function, first mentioned by Euler (1779), as explained by Chen (2019).
 
 Input:
 * Inlet temperatures (°C)
