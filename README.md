@@ -18,13 +18,15 @@ Copyright 2020 Jan Stampfli
 
 ## Description
 
-Framework to calculate the outlet temperatures, the logarithmic temperature difference, the overall heat transfer coefficient and the needed area for a counter-current heat exchanger.
+HeatExchanger class: Framework to calculate the outlet temperatures, the logarithmic temperature difference, the overall heat transfer coefficient and the needed area for a counter-current heat exchanger.
 
 Input:
 * Inlet temperatures (°C)
 * Film heat transfer coefficients (kW/(m2K))
 * Heat capacity flows = specific heat capacity * mass flow (kW/K)
 * Heat load (kW)
+* Mixer types: none, bypass, or admixer
+* Mixer fractions ((kg/s)/(kg/s))
 
 Properties of heat exchanger:
 * Inlet temperatures (°C)
@@ -35,3 +37,27 @@ Properties of heat exchanger:
 * Overall heat transfer coefficient (kW/(m2K))
 * Logarithmic temperature difference (K)
 * Area (m2)
+
+HeatExchangerReversed class: Framework to calculate the inlet, outlet temperatures, needed mixer fraction to compensate too large or small area (different operating case) for a counter-current heat exchanger. The logarithmic mean temperature difference is reversed using the Lambert W-function, first mentioned by Euler (1779), as explained by Chen (2019).
+
+Input:
+* Inlet temperatures (°C)
+* Film heat transfer coefficients (kW/(m2K))
+* Heat capacity flows = specific heat capacity * mass flow (kW/K)
+* Heat load (kW)
+* Existent area (m2)
+
+Properties of heat exchanger:
+* Inlet temperatures (°C)
+* Film heat transfer coefficients (kW/(m2K))
+* Heat capacity flows = specific heat capacity * mass flow (kW/K)
+* Heat load (kW)
+* Outlet temperatures (°C)
+* Overall heat transfer coefficient (kW/(m2K))
+* Logarithmic temperature difference (K)
+* Needed mixer type: none, bypass, or admixer
+* Mixer fraction ((kg/s)/(kg/s))
+
+Reference
+* Chen, J.J.J.,2019. Logarithmic mean: Chen's approximation or explicit solution?. Computers and Chemical Engineering. 120,1-3.
+* Euler, L.,1779. De serie Lambertine plurimisque eius insignibus proprietatibus. Acta Academiae scientiarum imperialis petropolitanae, 29-51.

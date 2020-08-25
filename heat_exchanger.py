@@ -26,8 +26,10 @@ class HeatExchanger:
             overall_heat_transfer_coefficient {float} -- Resulting overall heat transfer coefficient (kW/(m2K))
             outlet_temperature_hot_stream {float} -- Resulting outlet temperature of hot stream (°C)
             outlet_temperature_cold_stream {float} -- Resulting outlet temperature of hot stream (°C)
+            heat_exchanger_outlet_temperature_hot_stream {float} -- Resulting temperature hot stream out of mixer (°C)
+            heat_exchanger_outlet_temperature_cold_stream {float} -- Resulting temperature cold stream out of mixer (°C)
             logarithmic_temperature_difference {float} -- Resulting logarithmic temperature difference (K)
-            area {float} --Resulting area (m2)
+            area {float} -- Resulting area (m2)
         """
 
     def __init__(self, inlet_temperatures, film_heat_transfer_coefficients, heat_capacity_flows, heat_load, mixer_type_hot='none', mixer_type_cold='none', mixer_fraction_hot=0, mixer_fraction_cold=0):
