@@ -72,7 +72,7 @@ def test_logarithmic_mean_temperature_difference():
 
 
 def test_lambertw():
-    # Data from Chen J.J.J.,2019. Logarithmic mean: Chen's approximation or explicit solution?. Computers and Chemical Engineering. 120,1-3.
+    # Data from Chen, J.J.J.,2019. Logarithmic mean: Chen's approximation or explicit solution?. Computers and Chemical Engineering. 120,1-3.
     inlet_temperatures = [125, 30]
     film_heat_transfer_coefficients = [1, 1]
     heat_capacity_flows = [100, 465.83850931677018633540372670807]
@@ -92,30 +92,3 @@ def test_lambertw():
     LMTD = (dTa - dTb) / np.log(dTa / dTb)
     UA = heat_load / LMTD
     assert UA == 175
-
-
-# def test_heat_exchanger_temperatures():
-#     m, h = setup_model()
-#     m.heat_exchanger_temperature_calculation(mixer_side='none')
-#     assert m.heat_exchanger_inlet_temperature_hot_stream == h.heat_exchanger_inlet_temperature_hot_stream
-#     assert m.heat_exchanger_outlet_temperature_hot_stream == h.heat_exchanger_outlet_temperature_hot_stream
-#     assert m.heat_exchanger_inlet_temperature_cold_stream == h.heat_exchanger_inlet_temperature_cold_stream
-#     assert m.heat_exchanger_outlet_temperature_cold_stream == h.heat_exchanger_outlet_temperature_cold_stream
-#     m.heat_load = 95  # bypass
-#     m.heat_exchanger_temperature_calculation(mixer_side='cold')
-#     assert m.heat_exchanger_inlet_temperature_hot_stream == h.heat_exchanger_inlet_temperature_hot_stream
-#     assert m.heat_exchanger_outlet_temperature_hot_stream == h.heat_exchanger_inlet_temperature_hot_stream - m.heat_load / m.heat_capacity_flow_hot_stream
-#     assert m.heat_exchanger_inlet_temperature_cold_stream == h.heat_exchanger_inlet_temperature_cold_stream
-
-#     dTa = m.heat_exchanger_outlet_temperature_hot_stream - m.heat_exchanger_inlet_temperature_cold_stream
-#     dTb = m.heat_exchanger_inlet_temperature_hot_stream - m.heat_exchanger_outlet_temperature_cold_stream
-#     if dTa != dTb:
-#         LMTD = (dTa-dTb) / np.log(dTa / dTb)
-#     else:
-#         LMTD = dTa
-#     assert abs(LMTD - m.logarithmic_mean_temperature_difference) < 10e-1
-
-    # m.heat_load = 110  # admixer
-    # m.heat_exchanger_temperature_calculation(mixer_side='cold')
-    # m.heat_load = 90  # bypass
-    # m.heat_load = 110  # admixer

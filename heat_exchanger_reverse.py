@@ -100,7 +100,7 @@ class HeatExchangerReverse():
                 self.heat_exchanger_outlet_temperature_cold_stream = self.outlet_temperature_cold_stream
 
                 dT_1 = self.heat_exchanger_outlet_temperature_hot_stream - self.heat_exchanger_inlet_temperature_cold_stream
-                if self.heat_capacity_flow_hot_stream != self.heat_capacity_flow_cold_stream:
+                if dT_1 != self.logarithmic_mean_temperature_difference:
                     dT_LMTD = dT_1 / self.logarithmic_mean_temperature_difference
                     beta = - lambertw(-dT_LMTD * np.exp(-dT_LMTD), -1).real * 1 / dT_LMTD
                     dT_2 = beta * dT_1
@@ -115,7 +115,7 @@ class HeatExchangerReverse():
                 self.heat_exchanger_outlet_temperature_cold_stream = self.outlet_temperature_cold_stream
 
                 dT_2 = self.heat_exchanger_inlet_temperature_hot_stream - self.heat_exchanger_outlet_temperature_cold_stream
-                if self.heat_capacity_flow_hot_stream != self.heat_capacity_flow_cold_stream:
+                if dT_2 != self.logarithmic_mean_temperature_difference:
                     dT_LMTD = dT_2 / self.logarithmic_mean_temperature_difference
                     beta = - lambertw(-dT_LMTD * np.exp(-dT_LMTD), -1).real * 1 / dT_LMTD
                     dT_1 = beta * dT_2
@@ -132,7 +132,7 @@ class HeatExchangerReverse():
                 self.heat_exchanger_outlet_temperature_cold_stream = self.outlet_temperature_cold_stream
 
                 dT_2 = self.heat_exchanger_inlet_temperature_hot_stream - self.heat_exchanger_outlet_temperature_cold_stream
-                if self.heat_capacity_flow_hot_stream != self.heat_capacity_flow_cold_stream:
+                if dT_2 != self.logarithmic_mean_temperature_difference:
                     dT_LMTD = dT_2 / self.logarithmic_mean_temperature_difference
                     beta = - lambertw(-dT_LMTD * np.exp(-dT_LMTD), -1).real * 1 / dT_LMTD
                     dT_1 = beta * dT_2
@@ -148,7 +148,7 @@ class HeatExchangerReverse():
                 self.heat_exchanger_inlet_temperature_cold_stream = self.inlet_temperature_cold_stream
 
                 dT_1 = self.heat_exchanger_outlet_temperature_hot_stream - self.heat_exchanger_inlet_temperature_cold_stream
-                if self.heat_capacity_flow_hot_stream != self.heat_capacity_flow_cold_stream:
+                if dT_1 != self.logarithmic_mean_temperature_difference:
                     dT_LMTD = dT_1 / self.logarithmic_mean_temperature_difference
                     beta = - lambertw(-dT_LMTD * np.exp(-dT_LMTD), -1).real * 1 / dT_LMTD
                     dT_2 = beta * dT_1
