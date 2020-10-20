@@ -1,5 +1,7 @@
 # Heat exchanger calculation
 
+[![DOI](https://zenodo.org/badge/263038127.svg)](https://zenodo.org/badge/latestdoi/263038127)
+
 Copyright 2020 Jan Stampfli
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
