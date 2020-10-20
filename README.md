@@ -1,6 +1,6 @@
 # Heat exchanger calculation
 
-[![DOI](https://zenodo.org/badge/263038127.svg)](https://zenodo.org/badge/latestdoi/263038127)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4109073.svg)](https://doi.org/10.5281/zenodo.4109073)
 
 Copyright 2020 Jan Stampfli
 
